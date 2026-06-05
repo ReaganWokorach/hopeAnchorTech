@@ -2034,3 +2034,129 @@ em { font-style: italic; color: var(--teal); }
   flex-shrink: 0;
 }
 
+
+/* ============================================================
+   CONTACT PAGE — Social buttons & form icon tweaks
+   ============================================================ */
+.contact-socials {
+  margin: 28px 0;
+}
+.contact-socials p {
+  margin-bottom: 12px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+.contact-socials-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.contact-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--grey-200);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy);
+  background: var(--white);
+  transition: var(--transition);
+}
+.contact-social-btn:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  transform: translateY(-2px);
+}
+.contact-social-btn i {
+  font-size: 15px;
+}
+
+/* Form label icons */
+.form-group label i {
+  color: var(--teal);
+  margin-right: 4px;
+  font-size: 13px;
+}
+
+/* Spinner on submit button */
+#btnLoading i {
+  margin-right: 6px;
+}
+
+/* Form success icon */
+.form-success i.fa-circle-check {
+  font-size: 40px;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* CFC details spacing */
+.cfc-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+.cfc-details span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+.cfc-details span i {
+  color: var(--teal);
+}
+
+/* Curriculum check icons */
+.curr-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.curr-item i {
+  color: var(--teal);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Who-for label icon */
+.who-for i {
+  color: var(--teal);
+  margin-right: 4px;
+}
+
+/* FAQ question icon */
+.faq-item h4 {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.faq-item h4 i {
+  color: var(--teal);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Services svc-detail-card list */
+.svc-detail-card ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.svc-detail-card ul li i {
+  color: var(--teal);
+  margin-top: 3px;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+/* Contact verse box anchor icon */
+.contact-verse-box span i {
+  font-size: 20px;
+}
