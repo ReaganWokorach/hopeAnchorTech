@@ -1145,8 +1145,6 @@ em { font-style: italic; color: var(--teal); }
   height: 100%;
   background: linear-gradient(135deg, var(--navy), var(--navy-soft));
   border-radius: 50%;
-  overflow: hidden;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1907,12 +1905,8 @@ em { font-style: italic; color: var(--teal); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
   border-radius: 50%;
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .founder-badge-float {
