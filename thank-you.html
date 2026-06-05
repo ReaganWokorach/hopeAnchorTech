@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — HopeAnchor Tech</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .thankyou-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+      background: linear-gradient(160deg, #0D1F3C 0%, #1E3A6E 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .thankyou-page::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: #00A99D;
+      border-radius: 50%;
+      filter: blur(130px);
+      opacity: 0.09;
+      top: -150px; right: -150px;
+    }
+    .thankyou-page::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      background: #F5A623;
+      border-radius: 50%;
+      filter: blur(110px);
+      opacity: 0.07;
+      bottom: -80px; left: -80px;
+    }
+    .ty-content {
+      position: relative;
+      z-index: 1;
+      max-width: 580px;
+    }
+    .ty-check {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #00A99D, #007A72);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      font-size: 48px;
+      box-shadow: 0 0 0 16px rgba(0,169,157,.12), 0 16px 48px rgba(0,169,157,.3);
+      animation: pop-in 0.5s cubic-bezier(.175,.885,.32,1.275) both;
+    }
+    @keyframes pop-in {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .ty-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 16px;
+      animation: fade-up-in 0.5s 0.2s ease both;
+    }
+    .ty-title em { color: #00CFC3; font-style: italic; }
+    .ty-verse {
+      font-size: 14px;
+      color: #F5A623;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      margin-bottom: 20px;
+      padding: 12px 20px;
+      border-left: 3px solid #F5A623;
+      text-align: left;
+      background: rgba(245,166,35,.07);
+      border-radius: 0 8px 8px 0;
+      animation: fade-up-in 0.5s 0.3s ease both;
+    }
+    .ty-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: rgba(255,255,255,.65);
+      line-height: 1.75;
+      margin-bottom: 40px;
+      animation: fade-up-in 0.5s 0.4s ease both;
+    }
+    .ty-what-next {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 36px;
+      text-align: left;
+      animation: fade-up-in 0.5s 0.5s ease both;
+    }
+    .ty-what-next h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 16px;
+    }
+    .ty-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .ty-steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,.75);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      line-height: 1.5;
+    }
+    .ty-steps li:last-child { border-bottom: none; }
+    .ty-step-num {
+      width: 28px;
+      height: 28px;
+      background: rgba(0,169,157,.2);
+      border: 1px solid rgba(0,169,157,.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: #00CFC3;
+      flex-shrink: 0;
+    }
+    .ty-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fade-up-in 0.5s 0.6s ease both;
+    }
+    .ty-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #00A99D, #007A72);
+      color: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 99px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,169,157,.35);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .ty-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,169,157,.45);
+    }
+    .ty-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid rgba(255,255,255,.25);
+      color: rgba(255,255,255,.8);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: background .25s, border-color .25s;
+    }
+    .ty-btn-outline:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.5);
+    }
+    .ty-footer-note {
+      margin-top: 40px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,.25);
+      animation: fade-up-in 0.5s 0.7s ease both;
+    }
+    @keyframes fade-up-in {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Countdown bar */
+    .ty-countdown {
+      margin-top: 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,.3);
+    }
+    .countdown-bar-wrap {
+      width: 100%;
+      height: 2px;
+      background: rgba(255,255,255,.08);
+      border-radius: 2px;
+      margin: 8px 0 4px;
+      overflow: hidden;
+    }
+    .countdown-bar {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #00A99D, #007A72);
+      border-radius: 2px;
+      transform-origin: left;
+      animation: shrink 10s linear forwards;
+    }
+    @keyframes shrink {
+      from { transform: scaleX(1); }
+      to   { transform: scaleX(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-page">
+    <div class="ty-content">
+
+      <div class="ty-check">✅</div>
+
+      <h1 class="ty-title">Message <em>Received!</em></h1>
+
+      <p class="ty-verse">&ldquo;And my God will meet all your needs according to the riches of his glory.&rdquo; — Philippians 4:19</p>
+
+      <p class="ty-desc">
+        Thank you for reaching out to HopeAnchor Tech. Your message has been successfully submitted and we will get back to you within <strong style="color:#fff;">24 hours</strong>. God bless you!
+      </p>
+
+      <div class="ty-what-next">
+        <h4>What happens next</h4>
+        <ul class="ty-steps">
+          <li>
+            <span class="ty-step-num">1</span>
+            <span>Our team reviews your message and matches you with the right service or course.</span>
+          </li>
+          <li>
+            <span class="ty-step-num">2</span>
+            <span>We'll contact you via email or phone within 24 hours to confirm details and next steps.</span>
+          </li>
+          <li>
+            <span class="ty-step-num">3</span>
+            <span>For training enrolments, we'll confirm your cohort start date and any preparation needed.</span>
+          </li>
+          <li>
+            <span class="ty-step-num">4</span>
+            <span>For service requests, we'll send a quote or schedule a free consultation at your convenience.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ty-actions">
+        <a href="index.html" class="ty-btn-primary">🏠 Back to Home</a>
+        <a href="training.html" class="ty-btn-outline">🎓 Browse Courses</a>
+      </div>
+
+      <div class="ty-countdown">
+        <div class="countdown-bar-wrap">
+          <div class="countdown-bar"></div>
+        </div>
+        Redirecting to home in <span id="countNum">10</span> seconds…
+      </div>
+
+      <p class="ty-footer-note">
+        © 2025 HopeAnchor Tech · Gulu, Uganda 🇺🇬 · Founded by Reagan Wokorach
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Countdown redirect
+    let count = 10;
+    const countEl = document.getElementById('countNum');
+    const timer = setInterval(function () {
+      count--;
+      if (countEl) countEl.textContent = count;
+      if (count <= 0) {
+        clearInterval(timer);
+        window.location.href = 'index.html';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
