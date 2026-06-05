@@ -1,4 +1,4 @@
-# ⚓ HopeAnchor Tech — Official Website
+# HopeAnchor Tech — Official Website
 
 > *"Faith without works is dead." — James 2:17*
 
@@ -6,14 +6,14 @@ A professional, fully responsive multi-page website for **HopeAnchor Tech**, a f
 
 ---
 
-## 🌐 Live Site
+## Live Site
 
 > Deployed at: **[https://hopeanchortech.netlify.app](https://hopeanchortech.netlify.app)**
 > *(Update this URL after your first Netlify deployment)*
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 hopeanchor-tech/
@@ -31,13 +31,13 @@ hopeanchor-tech/
 
 ---
 
-## 🚀 Deploying to Netlify
+## Deploying to Netlify
 
 ### Option 1 — Drag & Drop (Fastest)
 1. Zip all files in this folder
 2. Go to [app.netlify.com](https://app.netlify.com)
 3. Drag the zip onto the Netlify dashboard
-4. Your site is live instantly ✅
+4. Your site is live instantly 
 
 ### Option 2 — GitHub + Netlify (Recommended for ongoing updates)
 
@@ -70,7 +70,7 @@ Once connected to GitHub, every `git push` to `main` will automatically redeploy
 
 ---
 
-## 📋 Pages
+## Pages
 
 | Page | URL | Description |
 |---|---|---|
@@ -83,7 +83,7 @@ Once connected to GitHub, every `git push` to `main` will automatically redeploy
 
 ---
 
-## 📬 Netlify Forms
+## Netlify Forms
 
 The contact form on `contact.html` uses **Netlify Forms** — no backend required.
 
@@ -93,7 +93,7 @@ The contact form on `contact.html` uses **Netlify Forms** — no backend require
 
 ---
 
-## 🎨 Design System
+## Design System
 
 | Token | Value | Usage |
 |---|---|---|
@@ -106,7 +106,7 @@ The contact form on `contact.html` uses **Netlify Forms** — no backend require
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **HTML5** — Semantic, accessible markup
 - **CSS3** — Custom properties, Grid, Flexbox, animations
@@ -116,12 +116,12 @@ The contact form on `contact.html` uses **Netlify Forms** — no backend require
 
 ---
 
-## ✏️ Customisation Checklist
+## Customisation Checklist
 
 Before going live, update the following:
 
-- [ ] Phone number: replace `+256 700 000000` in all HTML files
-- [ ] Email: replace `hello@hopeanchortech.ug` with your real address
+- [ ] Phone number: replace `+256 776 815217` in all HTML files
+- [ ] Email: replace `wokorachreagan5030@gmail.com` with your real address
 - [ ] Location: update exact address in `contact.html` and footer
 - [ ] Testimonials: replace sample names/quotes with real ones
 - [ ] Netlify site URL: update the Live Site link above
@@ -130,7 +130,7 @@ Before going live, update the following:
 
 ---
 
-## 👤 Author
+## Author
 
 **Reagan Wokorach**
 Founder & CEO, HopeAnchor Tech
@@ -138,7 +138,7 @@ Gulu Municipality, Northern Uganda 🇺🇬
 
 ---
 
-## 📄 License
+## License
 
 © 2025 HopeAnchor Tech. All rights reserved.
 *Built with faith & purpose in Gulu, Uganda.*
