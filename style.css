@@ -1772,3 +1772,265 @@ em { font-style: italic; color: var(--teal); }
   .cta-actions { flex-direction: column; align-items: center; }
   .why-ctas { flex-direction: column; }
 }
+
+/* ============================================================
+   FONT AWESOME ICON ADJUSTMENTS
+   ============================================================ */
+.mi-icon i,
+.pillar-icon i,
+.mvv-icon i,
+.ms-icon i,
+.svc-detail-icon i,
+.why-svc-item > i,
+.course-icon i,
+.cd-icon i,
+.ql-card > i,
+.fc-icon i,
+.orbit-anchor i,
+.callout-anchor i,
+.impact-verse span i {
+  display: inline-block;
+}
+
+.pillar-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pillar-list li i {
+  color: var(--teal);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.values-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.values-list li i {
+  color: var(--teal);
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: var(--grey-200);
+  font-size: 15px;
+  transition: var(--transition);
+}
+.footer-socials a:hover {
+  background: var(--teal);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.footer-contact li i {
+  color: var(--teal);
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 16px;
+}
+
+.footer-col ul li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-col ul li a i {
+  color: var(--teal);
+  font-size: 11px;
+}
+
+/* ============================================================
+   FOUNDER / CEO AVATAR — Photo-ready
+   ============================================================ */
+.founder-initials-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 16px;
+}
+
+.founder-avatar-icon {
+  font-size: 72px;
+  color: var(--teal);
+  opacity: 0.85;
+}
+
+.founder-avatar-update-hint {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--grey-400);
+  line-height: 1.5;
+  border: 1px dashed var(--grey-200);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  background: var(--grey-100);
+}
+.founder-avatar-update-hint code {
+  font-size: 11px;
+  background: var(--grey-200);
+  padding: 1px 4px;
+  border-radius: 3px;
+  color: var(--navy);
+}
+
+/* When a real photo is used */
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.founder-badge-float {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.founder-badge-float i {
+  font-size: 13px;
+}
+
+.founder-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.founder-tags span i {
+  font-size: 12px;
+}
+
+/* Model flow arrow icon */
+.model-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--teal);
+}
+
+/* Testi quote icon */
+.testi-quote {
+  font-size: 32px;
+  color: var(--teal);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+/* Course level icon */
+.course-level i {
+  margin-right: 4px;
+}
+
+/* Contact detail icons */
+.cd-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--teal);
+  width: 44px;
+  height: 44px;
+  background: rgba(0,169,157,0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* SSH (services section header) icon */
+.ssh-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--teal);
+  width: 64px;
+  height: 64px;
+  background: rgba(0,169,157,0.1);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+/* Svc detail icon */
+.svc-detail-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--teal);
+  width: 52px;
+  height: 52px;
+  background: rgba(0,169,157,0.1);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+/* Why svc item icon */
+.why-svc-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.why-svc-item > .fa-solid,
+.why-svc-item > span > i {
+  font-size: 22px;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+/* Training approach icon */
+.ta-item > .fa-solid,
+.ta-item > i {
+  font-size: 26px;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+/* Quick links icon */
+.ql-card > .fa-solid,
+.ql-card > i {
+  font-size: 28px;
+  color: var(--teal);
+  margin-bottom: 14px;
+}
+
+/* CFC icon */
+.cfc-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--teal);
+  width: 64px;
+  height: 64px;
+  background: rgba(0,169,157,0.1);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+

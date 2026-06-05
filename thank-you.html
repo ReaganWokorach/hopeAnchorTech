@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .thankyou-page {
@@ -57,12 +58,13 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 32px;
-      font-size: 48px;
+      font-size: 44px;
+      color: #fff;
       box-shadow: 0 0 0 16px rgba(0,169,157,.12), 0 16px 48px rgba(0,169,157,.3);
       animation: pop-in 0.5s cubic-bezier(.175,.885,.32,1.275) both;
     }
     @keyframes pop-in {
-      0% { transform: scale(0); opacity: 0; }
+      0%   { transform: scale(0); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
     .ty-title {
@@ -125,22 +127,21 @@
       font-family: 'DM Sans', sans-serif;
       font-size: 14px;
       color: rgba(255,255,255,.75);
-      padding: 10px 0;
+      padding: 12px 0;
       border-bottom: 1px solid rgba(255,255,255,.07);
       line-height: 1.5;
     }
     .ty-steps li:last-child { border-bottom: none; }
-    .ty-step-num {
-      width: 28px;
-      height: 28px;
-      background: rgba(0,169,157,.2);
+    .ty-step-icon {
+      width: 34px;
+      height: 34px;
+      background: rgba(0,169,157,.15);
       border: 1px solid rgba(0,169,157,.3);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
-      font-weight: 700;
+      font-size: 14px;
       color: #00CFC3;
       flex-shrink: 0;
     }
@@ -188,19 +189,52 @@
       background: rgba(255,255,255,.08);
       border-color: rgba(255,255,255,.5);
     }
-    .ty-footer-note {
-      margin-top: 40px;
+    .ty-socials {
+      margin-top: 32px;
+      animation: fade-up-in 0.5s 0.65s ease both;
+    }
+    .ty-socials p {
       font-family: 'DM Sans', sans-serif;
       font-size: 12px;
-      color: rgba(255,255,255,.25);
+      color: rgba(255,255,255,.3);
+      margin-bottom: 12px;
+    }
+    .ty-socials-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .ty-socials-row a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,.5);
+      font-size: 16px;
+      text-decoration: none;
+      transition: background .25s, color .25s, transform .25s;
+    }
+    .ty-socials-row a:hover {
+      background: #00A99D;
+      color: #fff;
+      transform: translateY(-2px);
+      border-color: transparent;
+    }
+    .ty-footer-note {
+      margin-top: 32px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,.2);
       animation: fade-up-in 0.5s 0.7s ease both;
     }
     @keyframes fade-up-in {
-      0% { opacity: 0; transform: translateY(20px); }
+      0%   { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-
-    /* Countdown bar */
     .ty-countdown {
       margin-top: 16px;
       font-family: 'DM Sans', sans-serif;
@@ -233,7 +267,10 @@
   <div class="thankyou-page">
     <div class="ty-content">
 
-      <div class="ty-check">✅</div>
+      <!-- Success icon — FA circle-check replaces the emoji -->
+      <div class="ty-check">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
 
       <h1 class="ty-title">Message <em>Received!</em></h1>
 
@@ -244,42 +281,60 @@
       </p>
 
       <div class="ty-what-next">
-        <h4>What happens next</h4>
+        <h4><i class="fa-solid fa-list-check" style="margin-right:6px;color:#00CFC3;"></i> What happens next</h4>
         <ul class="ty-steps">
           <li>
-            <span class="ty-step-num">1</span>
+            <span class="ty-step-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
             <span>Our team reviews your message and matches you with the right service or course.</span>
           </li>
           <li>
-            <span class="ty-step-num">2</span>
+            <span class="ty-step-icon"><i class="fa-solid fa-phone"></i></span>
             <span>We'll contact you via email or phone within 24 hours to confirm details and next steps.</span>
           </li>
           <li>
-            <span class="ty-step-num">3</span>
+            <span class="ty-step-icon"><i class="fa-solid fa-graduation-cap"></i></span>
             <span>For training enrolments, we'll confirm your cohort start date and any preparation needed.</span>
           </li>
           <li>
-            <span class="ty-step-num">4</span>
+            <span class="ty-step-icon"><i class="fa-solid fa-file-invoice"></i></span>
             <span>For service requests, we'll send a quote or schedule a free consultation at your convenience.</span>
           </li>
         </ul>
       </div>
 
       <div class="ty-actions">
-        <a href="index.html" class="ty-btn-primary">Back to Home</a>
-        <a href="training.html" class="ty-btn-outline">Browse Courses</a>
+        <a href="index.html" class="ty-btn-primary">
+          <i class="fa-solid fa-house"></i> Back to Home
+        </a>
+        <a href="training.html" class="ty-btn-outline">
+          <i class="fa-solid fa-book-open"></i> Browse Courses
+        </a>
+      </div>
+
+      <!-- Social links -->
+      <div class="ty-socials">
+        <p>Follow us while you wait</p>
+        <div class="ty-socials-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
       </div>
 
       <div class="ty-countdown">
         <div class="countdown-bar-wrap">
           <div class="countdown-bar"></div>
         </div>
+        <i class="fa-solid fa-rotate-right" style="margin-right:4px;"></i>
         Redirecting to home in <span id="countNum">10</span> seconds…
       </div>
 
       <p class="ty-footer-note">
+        <i class="fa-solid fa-anchor" style="margin-right:4px;"></i>
         © 2025 HopeAnchor Tech · Gulu, Uganda 🇺🇬 · Founded by Reagan Wokorach
       </p>
+
     </div>
   </div>
 

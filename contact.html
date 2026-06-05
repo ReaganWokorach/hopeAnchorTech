@@ -7,22 +7,20 @@
   <meta name="description" content="Get in touch with HopeAnchor Tech in Gulu, Uganda. Enrol in training, request a service, or partner with us." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="canonical" href="https://hopeanchortech.netlify.app/contact.html" />
-  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hopeanchortech.netlify.app/contact.html" />
   <meta property="og:title" content="Contact — HopeAnchor Tech" />
   <meta property="og:description" content="Get in touch with HopeAnchor Tech in Gulu, Uganda. Enrol in training, request a service, or partner with us." />
   <meta property="og:site_name" content="HopeAnchor Tech" />
   <meta property="og:locale" content="en_UG" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Contact — HopeAnchor Tech" />
   <meta name="twitter:description" content="Get in touch with HopeAnchor Tech in Gulu, Uganda. Enrol in training, request a service, or partner with us." />
-  <!-- Theme colour for mobile browsers -->
   <meta name="theme-color" content="#0D1F3C" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -31,7 +29,7 @@
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <span class="logo-anchor">⚓</span>
+        <span class="logo-anchor"><i class="fa-solid fa-anchor"></i></span>
         <span class="logo-text">HopeAnchor<span class="logo-accent">Tech</span></span>
       </a>
       <nav class="nav-links" id="navLinks">
@@ -40,7 +38,7 @@
         <a href="services.html" class="nav-link">Services</a>
         <a href="training.html" class="nav-link">Training</a>
         <a href="contact.html" class="nav-link active">Contact</a>
-        <a href="contact.html" class="nav-cta">Enrol Now</a>
+        <a href="contact.html" class="nav-cta"><i class="fa-solid fa-graduation-cap"></i> Enrol Now</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -72,28 +70,28 @@
 
         <div class="contact-details">
           <div class="cd-item">
-            <span class="cd-icon"></span>
+            <span class="cd-icon"><i class="fa-solid fa-location-dot"></i></span>
             <div>
               <strong>Location</strong>
               <p>Gulu Municipality, Northern Uganda<br>(Exact address provided on enrolment)</p>
             </div>
           </div>
           <div class="cd-item">
-            <span class="cd-icon"></span>
+            <span class="cd-icon"><i class="fa-brands fa-whatsapp"></i></span>
             <div>
               <strong>Phone / WhatsApp</strong>
-              <p>+256 776 815217</p>
+              <p><a href="tel:+256776815217">+256 776 815217</a></p>
             </div>
           </div>
           <div class="cd-item">
-            <span class="cd-icon"></span>
+            <span class="cd-icon"><i class="fa-solid fa-envelope"></i></span>
             <div>
               <strong>Email</strong>
-              <p>wokorachreagan5030@gmailc.com</p>
+              <p><a href="mailto:wokorachreagan5030@gmail.com">wokorachreagan5030@gmail.com</a></p>
             </div>
           </div>
           <div class="cd-item">
-            <span class="cd-icon"></span>
+            <span class="cd-icon"><i class="fa-solid fa-clock"></i></span>
             <div>
               <strong>Hours</strong>
               <p>Monday – Saturday: 8:00 AM – 6:00 PM<br>Sunday: Closed (Day of Worship)</p>
@@ -101,20 +99,39 @@
           </div>
         </div>
 
+        <div class="contact-socials">
+          <p><strong>Connect with us</strong></p>
+          <div class="contact-socials-row">
+            <a href="#" class="contact-social-btn" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i> Facebook
+            </a>
+            <a href="#" class="contact-social-btn" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#" class="contact-social-btn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
         <div class="contact-verse-box">
-          <span>⚓</span>
+          <span><i class="fa-solid fa-anchor"></i></span>
           <blockquote>"Faith without works is dead." — James 2:17</blockquote>
           <p>We believe in showing up and serving. Reach out — we will respond.</p>
         </div>
       </div>
 
-      <!-- CONTACT FORM (Netlify) -->
+      <!-- =====================================================
+           MAIN CONTACT FORM — Netlify Forms
+           Submissions appear in your Netlify dashboard under:
+           Site → Forms → "contact"
+           ===================================================== -->
       <div class="contact-form-wrap">
-        <h3>Send Us a Message</h3>
+        <h3><i class="fa-solid fa-paper-plane"></i> Send Us a Message</h3>
         <p class="form-sub">Fill in the form below and we'll get back to you within 24 hours.</p>
 
         <div id="formSuccess" class="form-success" style="display:none;">
-          <span>✅</span>
+          <i class="fa-solid fa-circle-check"></i>
           <strong>Message sent!</strong>
           <p>Thank you for reaching out. We'll get back to you within 24 hours. God bless you!</p>
         </div>
@@ -128,36 +145,36 @@
           id="contactForm"
           novalidate
         >
-          <!-- Netlify hidden fields -->
+          <!-- Required Netlify hidden fields -->
           <input type="hidden" name="form-name" value="contact" />
           <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="firstName">First Name <span class="req">*</span></label>
+              <label for="firstName"><i class="fa-solid fa-user"></i> First Name <span class="req">*</span></label>
               <input type="text" id="firstName" name="firstName" placeholder="e.g. Aciro" required />
               <span class="field-error" id="firstNameError"></span>
             </div>
             <div class="form-group">
-              <label for="lastName">Last Name <span class="req">*</span></label>
+              <label for="lastName"><i class="fa-solid fa-user"></i> Last Name <span class="req">*</span></label>
               <input type="text" id="lastName" name="lastName" placeholder="e.g. Olivia" required />
               <span class="field-error" id="lastNameError"></span>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="email">Email Address <span class="req">*</span></label>
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email Address <span class="req">*</span></label>
             <input type="email" id="email" name="email" placeholder="your@email.com" required />
             <span class="field-error" id="emailError"></span>
           </div>
 
           <div class="form-group">
-            <label for="phone">Phone / WhatsApp</label>
+            <label for="phone"><i class="fa-brands fa-whatsapp"></i> Phone / WhatsApp</label>
             <input type="tel" id="phone" name="phone" placeholder="+256 700 000000" />
           </div>
 
           <div class="form-group">
-            <label for="subject">I am interested in… <span class="req">*</span></label>
+            <label for="subject"><i class="fa-solid fa-list"></i> I am interested in… <span class="req">*</span></label>
             <select id="subject" name="subject" required>
               <option value="" disabled selected>Select an option</option>
               <optgroup label="Community Training">
@@ -185,22 +202,23 @@
           </div>
 
           <div class="form-group">
-            <label for="message">Your Message <span class="req">*</span></label>
+            <label for="message"><i class="fa-solid fa-message"></i> Your Message <span class="req">*</span></label>
             <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about what you need, your background, or any questions you have…" required></textarea>
             <span class="field-error" id="messageError"></span>
           </div>
 
           <div class="form-group form-check">
             <input type="checkbox" id="newsletter" name="newsletter" value="yes" />
-            <label for="newsletter">Keep me informed about new courses and updates from HopeAnchor Tech</label>
+            <label for="newsletter"><i class="fa-solid fa-bell"></i> Keep me informed about new courses and updates from HopeAnchor Tech</label>
           </div>
 
           <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-            <span id="btnText">Send Message </span>
-            <span id="btnLoading" style="display:none;">Sending…</span>
+            <span id="btnText"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+            <span id="btnLoading" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Sending…</span>
           </button>
         </form>
       </div>
+
     </div>
   </section>
 
@@ -213,22 +231,22 @@
       </div>
       <div class="quick-links-grid">
         <a href="training.html#fundamentals" class="ql-card">
-          <span></span>
+          <i class="fa-solid fa-desktop"></i>
           <h4>Enrol: Computer Fundamentals</h4>
           <p>Free · 4 Weeks · Beginner</p>
         </a>
         <a href="training.html#msoffice" class="ql-card">
-          <span></span>
+          <i class="fa-brands fa-microsoft"></i>
           <h4>Enrol: MS Office Suite</h4>
           <p>Affordable · 6 Weeks · Intermediate</p>
         </a>
         <a href="services.html#bureau" class="ql-card">
-          <span></span>
+          <i class="fa-solid fa-id-card"></i>
           <h4>Request: CV Design</h4>
           <p>Professional · Same-day available</p>
         </a>
         <a href="services.html#technical" class="ql-card">
-          <span></span>
+          <i class="fa-solid fa-globe"></i>
           <h4>Request: Web Development</h4>
           <p>SME-focused · Affordable</p>
         </a>
@@ -241,42 +259,49 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo footer-logo">
-          <span class="logo-anchor">⚓</span>
+          <span class="logo-anchor"><i class="fa-solid fa-anchor"></i></span>
           <span class="logo-text">HopeAnchor<span class="logo-accent">Tech</span></span>
         </a>
         <p>A faith-driven social enterprise empowering Northern Uganda through technology — one skill, one life, one community at a time.</p>
         <p class="footer-verse"><em>"Faith without works is dead." — James 2:17</em></p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
-          <li><a href="training.html">Community Training</a></li>
-          <li><a href="services.html">Business Bureau</a></li>
-          <li><a href="services.html">Technical Services</a></li>
-          <li><a href="services.html">Data Labeling Consulting</a></li>
+          <li><a href="training.html"><i class="fa-solid fa-chevron-right"></i> Community Training</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Business Bureau</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Technical Services</a></li>
+          <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Data Labeling</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="training.html">Courses</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html">Partner With Us</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="training.html"><i class="fa-solid fa-chevron-right"></i> Courses</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Partner With Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Contact</h5>
         <ul class="footer-contact">
-          <li>Gulu Municipality, Northern Uganda</li>
-          <li>+256 776 812517</li>
-          <li>wokorachreagan5030@gmail.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> Gulu Municipality, Northern Uganda</li>
+          <li><i class="fa-brands fa-whatsapp"></i> +256 776 815217</li>
+          <li><i class="fa-solid fa-envelope"></i> wokorachreagan5030@gmail.com</li>
+          <li><i class="fa-solid fa-clock"></i> Mon–Sat: 8:00 AM – 6:00 PM</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2025 HopeAnchor Tech. Founded by Reagan Wokorach. All rights reserved.</p>
-      <p>Built with faith &amp; purpose in Gulu, Uganda. 🇺🇬</p>
+      <p>Built with <i class="fa-solid fa-heart" style="color:var(--gold)"></i> &amp; purpose in Gulu, Uganda. 🇺🇬</p>
     </div>
   </footer>
 

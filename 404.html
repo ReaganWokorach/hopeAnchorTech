@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page Not Found — HopeAnchor Tech</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .error-page {
@@ -44,13 +46,14 @@
     .error-content { position: relative; z-index: 1; max-width: 540px; }
     .error-anchor {
       font-size: 80px;
+      color: #00A99D;
       display: block;
       margin-bottom: 24px;
       animation: float-anchor 3s ease-in-out infinite;
     }
     @keyframes float-anchor {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-14px); }
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50%       { transform: translateY(-14px) rotate(5deg); }
     }
     .error-code {
       font-family: 'Playfair Display', serif;
@@ -74,9 +77,11 @@
       font-family: 'Playfair Display', serif;
       font-style: italic;
       margin-bottom: 12px;
-      padding: 0 16px;
+      padding: 10px 16px;
       border-left: 3px solid #F5A623;
       text-align: left;
+      background: rgba(245,166,35,.06);
+      border-radius: 0 8px 8px 0;
     }
     .error-desc {
       font-family: 'DM Sans', sans-serif;
@@ -138,6 +143,9 @@
       border-top: 1px solid rgba(255,255,255,.1);
     }
     .error-nav-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       font-family: 'DM Sans', sans-serif;
       font-size: 13px;
       font-weight: 500;
@@ -146,29 +154,44 @@
       transition: color .2s;
     }
     .error-nav-links a:hover { color: #00CFC3; }
+    .error-nav-links a i { font-size: 11px; }
   </style>
 </head>
 <body>
   <div class="error-page">
     <div class="error-content">
-      <span class="error-anchor">⚓</span>
+
+      <!-- Animated anchor icon -->
+      <span class="error-anchor">
+        <i class="fa-solid fa-anchor"></i>
+      </span>
+
       <div class="error-code">404</div>
       <h1 class="error-title">This page has <em>drifted away</em></h1>
+
       <p class="error-verse">&ldquo;For I know the plans I have for you…&rdquo; — Jeremiah 29:11</p>
+
       <p class="error-desc">
         The page you're looking for doesn't exist or may have been moved.
         But don't worry — HopeAnchor Tech has plenty of great places to go.
       </p>
+
       <div class="error-actions">
-        <a href="index.html" class="err-btn-primary">Back to Home</a>
-        <a href="contact.html" class="err-btn-ghost">Contact Us</a>
+        <a href="index.html" class="err-btn-primary">
+          <i class="fa-solid fa-house"></i> Back to Home
+        </a>
+        <a href="contact.html" class="err-btn-ghost">
+          <i class="fa-solid fa-envelope"></i> Contact Us
+        </a>
       </div>
+
       <div class="error-nav-links">
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="training.html">Training</a>
-        <a href="contact.html">Contact</a>
+        <a href="about.html"><i class="fa-solid fa-heart"></i> About</a>
+        <a href="services.html"><i class="fa-solid fa-briefcase"></i> Services</a>
+        <a href="training.html"><i class="fa-solid fa-graduation-cap"></i> Training</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
       </div>
+
     </div>
   </div>
 </body>
