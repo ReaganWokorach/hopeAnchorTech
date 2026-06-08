@@ -1129,15 +1129,17 @@ em { font-style: italic; color: var(--teal); }
 .founder-avatar-wrap {
   position: relative;
   width: 220px;
+  height: 220px;
   flex-shrink: 0;
 }
 
 .founder-avatar-ring {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   border: 3px solid var(--teal);
   border-radius: 50%;
   padding: 8px;
+  overflow: hidden;
 }
 
 .founder-avatar-inner {
