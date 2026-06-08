@@ -1138,30 +1138,29 @@ em { font-style: italic; color: var(--teal); }
   width: 100%;
   height: 100%;
   border: 3px solid var(--teal);
-  border-radius: 50%;
+  border-radius: 50% !important; 
   padding: 8px;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 .founder-avatar-inner {
+  position: relative; 
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, var(--navy), var(--navy-soft));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; 
-  isolation: isolate; 
-  transform: translateZ(0); 
-  -webkit-transform: translateZ(0);
+  border-radius: 50% !important; 
+  overflow: hidden !important; 
 }
 
 .founder-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; 
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important;
   display: block;
 }
 
@@ -1174,7 +1173,8 @@ em { font-style: italic; color: var(--teal); }
 
 .founder-badge-float {
   position: absolute;
-  bottom: -10px; left: 50%;
+  bottom: -10px; 
+  left: 50%;
   transform: translateX(-50%);
   background: var(--gold);
   color: var(--navy);
@@ -1183,7 +1183,7 @@ em { font-style: italic; color: var(--teal); }
   padding: 5px 16px;
   border-radius: 99px;
   white-space: nowrap;
-  z-index: 10; /* Ensures badge floats above hardware-accelerated parent */
+  z-index: 5; 
 }
 
 .founder-text .section-tag { display: block; margin-bottom: 8px; }
