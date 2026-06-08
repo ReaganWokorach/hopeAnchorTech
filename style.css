@@ -2210,3 +2210,284 @@ em { font-style: italic; color: var(--teal); }
 .contact-verse-box span i {
   font-size: 20px;
 }
+
+/* ============================================================
+   LOGO IMAGE — replaces FA anchor icon
+   ============================================================ */
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* White logo: shown on dark navbar & dark-theme */
+.logo-img-white { display: block; }
+/* Dark logo: hidden on dark navbar, shown in light-theme mobile or footer */
+.logo-img-dark  { display: none; }
+
+/* Footer always uses the black logo for legibility on dark bg */
+.logo-img-footer {
+  height: 36px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* keep white on dark footer */
+}
+
+/* Orbit logo inside hero visual */
+.orbit-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,169,157,0.4));
+}
+
+/* Impact verse logo */
+.impact-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+}
+
+/* ============================================================
+   NAV RIGHT — wraps toggle + hamburger
+   ============================================================ */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* ============================================================
+   DARK / LIGHT THEME TOGGLE
+   ============================================================ */
+.theme-toggle {
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+
+/* ============================================================
+   LIGHT THEME (default — html[data-theme="light"])
+   ============================================================ */
+:root,
+[data-theme="light"] {
+  --body-bg: #f7f8fa;
+  --surface: #ffffff;
+  --text-main: #1a2233;
+  --text-light: #556080;
+  --border-color: #e2e8f0;
+}
+
+/* ============================================================
+   DARK THEME (html[data-theme="dark"])
+   ============================================================ */
+[data-theme="dark"] {
+  --body-bg: #0d1117;
+  --surface: #161b22;
+  --text-main: #e6edf3;
+  --text-light: #8b949e;
+  --border-color: #30363d;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--body-bg);
+  color: var(--text-main);
+}
+
+/* Dark theme: sections */
+[data-theme="dark"] .section,
+[data-theme="dark"] .why-us,
+[data-theme="dark"] .training-tease,
+[data-theme="dark"] .testimonials,
+[data-theme="dark"] .global-reach-section {
+  background-color: var(--body-bg);
+}
+[data-theme="dark"] .mission-strip,
+[data-theme="dark"] .mvv-section,
+[data-theme="dark"] .tech-services-section,
+[data-theme="dark"] .why-services,
+[data-theme="dark"] .faq-section,
+[data-theme="dark"] .training-courses-section {
+  background-color: var(--surface);
+}
+
+/* Dark theme: cards & boxes */
+[data-theme="dark"] .pillar-card,
+[data-theme="dark"] .course-card,
+[data-theme="dark"] .testi-card,
+[data-theme="dark"] .mvv-card,
+[data-theme="dark"] .svc-detail-card,
+[data-theme="dark"] .course-full-card,
+[data-theme="dark"] .faq-item,
+[data-theme="dark"] .impact-box,
+[data-theme="dark"] .callout-card,
+[data-theme="dark"] .gr-globe-card,
+[data-theme="dark"] .why-svc-item {
+  background: var(--surface);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .pillar-card p,
+[data-theme="dark"] .course-card p,
+[data-theme="dark"] .testi-card p,
+[data-theme="dark"] .mvv-card p,
+[data-theme="dark"] .svc-detail-card p,
+[data-theme="dark"] .faq-item p,
+[data-theme="dark"] .impact-desc,
+[data-theme="dark"] .section-sub,
+[data-theme="dark"] .hero-sub,
+[data-theme="dark"] .why-text p,
+[data-theme="dark"] .gr-text p {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .page-hero-title {
+  color: var(--text-main);
+}
+
+/* Dark theme: navbar swaps logo */
+[data-theme="dark"] .logo-img-white { display: block; }
+[data-theme="dark"] .logo-img-dark  { display: none; }
+
+/* Light theme navbar: if navbar scrolled & light theme, show dark logo */
+[data-theme="light"] .navbar.scrolled .logo-img-white { display: none; }
+[data-theme="light"] .navbar.scrolled .logo-img-dark  { display: block; }
+/* But keep white when navbar is at top (transparent/dark bg) */
+[data-theme="light"] .navbar:not(.scrolled) .logo-img-white { display: block; }
+[data-theme="light"] .navbar:not(.scrolled) .logo-img-dark  { display: none; }
+
+/* Dark theme toggle icon flip */
+[data-theme="dark"] .theme-toggle {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.15);
+  color: #ffd700;
+}
+
+/* ============================================================
+   GLOBAL REACH SECTION
+   ============================================================ */
+.global-reach-section {
+  background: linear-gradient(135deg, #0D1F3C 0%, #1E3A6E 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.global-reach-section::before {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  background: #00A99D;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.08;
+  top: -100px; right: -100px;
+  pointer-events: none;
+}
+.global-reach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .global-reach-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+.gr-text .section-tag { color: var(--teal); }
+.gr-text .section-title { color: #fff; }
+.gr-text p { color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+.gr-points {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+.gr-point {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+}
+.gr-point i {
+  width: 36px;
+  height: 36px;
+  background: rgba(0,169,157,0.15);
+  border: 1px solid rgba(0,169,157,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #00CFC3;
+  flex-shrink: 0;
+}
+.gr-globe-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+}
+.gr-globe-icon {
+  font-size: 80px;
+  color: var(--teal);
+  margin-bottom: 28px;
+  line-height: 1;
+}
+.gr-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.gr-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 99px;
+  padding: 10px 18px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+.gr-badge i { color: var(--teal); font-size: 14px; }
+.gr-badge-teal {
+  background: rgba(0,169,157,0.15);
+  border-color: rgba(0,169,157,0.3);
+  color: #fff;
+}
+.gr-badge-gold {
+  background: rgba(245,166,35,0.12);
+  border-color: rgba(245,166,35,0.3);
+  color: rgba(255,255,255,0.9);
+}
+.gr-badge-gold i { color: #F5A623; }
+
+/* Dark-theme override for global reach (it's already navy so stays as-is) */
+[data-theme="dark"] .global-reach-section { background: linear-gradient(135deg, #0a1628 0%, #12243d 100%); }

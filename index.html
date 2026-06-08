@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HopeAnchor Tech — Empowering Gulu Through Technology</title>
-  <meta name="description" content="HopeAnchor Tech is a faith-driven social enterprise in Gulu, Uganda, providing affordable tech training, business bureau services, and technical solutions to empower the community." />
+  <title>HopeAnchor Tech — Empowering Communities Through Technology</title>
+  <meta name="description" content="HopeAnchor Tech is a faith-driven social enterprise in Gulu, Uganda, providing affordable tech training, business bureau services, and technical solutions to empower communities worldwide." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="canonical" href="https://hopeanchortech.netlify.app/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hopeanchortech.netlify.app/" />
-  <meta property="og:title" content="HopeAnchor Tech — Empowering Gulu Through Technology" />
-  <meta property="og:description" content="HopeAnchor Tech is a faith-driven social enterprise in Gulu, Uganda, providing tech training, business services, and technical solutions to empower the community." />
+  <meta property="og:title" content="HopeAnchor Tech — Empowering Communities Through Technology" />
+  <meta property="og:description" content="HopeAnchor Tech is a faith-driven social enterprise providing tech training, business services, and technical solutions to anyone, anywhere." />
   <meta property="og:site_name" content="HopeAnchor Tech" />
   <meta property="og:locale" content="en_UG" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="HopeAnchor Tech — Empowering Gulu Through Technology" />
-  <meta name="twitter:description" content="HopeAnchor Tech is a faith-driven social enterprise in Gulu, Uganda, providing tech training, business services, and technical solutions to empower the community." />
+  <meta name="twitter:title" content="HopeAnchor Tech — Empowering Communities Through Technology" />
+  <meta name="twitter:description" content="HopeAnchor Tech is a faith-driven social enterprise providing tech training, business services, and technical solutions to anyone, anywhere." />
   <meta name="theme-color" content="#0D1F3C" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +29,8 @@
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <span class="logo-anchor"><i class="fa-solid fa-anchor"></i></span>
+        <img src="hatLogoWhite.png" alt="HopeAnchor Tech Logo" class="logo-img logo-img-white" />
+        <img src="hatLogoBlack.png" alt="HopeAnchor Tech Logo" class="logo-img logo-img-dark" />
         <span class="logo-text">HopeAnchor<span class="logo-accent">Tech</span></span>
       </a>
       <nav class="nav-links" id="navLinks">
@@ -40,9 +41,15 @@
         <a href="contact.html" class="nav-link">Contact</a>
         <a href="contact.html" class="nav-cta"><i class="fa-solid fa-graduation-cap"></i> Enrol Now</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <!-- Dark / Light toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -56,7 +63,7 @@
     <div class="hero-content">
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        Faith-Driven · Community-Focused · Gulu, Uganda
+        Faith-Driven · Global Reach · Based in Gulu, Uganda
       </div>
       <h1 class="hero-title">
         <span class="title-line">Anchored in Faith.</span>
@@ -64,7 +71,7 @@
       </h1>
       <p class="hero-verse">&ldquo;Faith without works is dead.&rdquo; — James 2:17</p>
       <p class="hero-sub">
-        HopeAnchor Tech bridges the digital divide in Northern Uganda — delivering world-class tech training, business services, and technical solutions to anyone who wants to learn and grow.
+        HopeAnchor Tech delivers world-class tech training, business services, and technical solutions — rooted in Gulu, Uganda, but open to anyone, anywhere in the world.
       </p>
       <div class="hero-actions">
         <a href="training.html" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Explore Training</a>
@@ -75,7 +82,7 @@
         <div class="stat-divider"></div>
         <div class="stat"><span class="stat-num">3</span><span class="stat-label">Service Tracks</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Foundation Courses</span></div>
+        <div class="stat"><span class="stat-num">Global</span><span class="stat-label">Online Services</span></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -95,7 +102,8 @@
         <div class="hero-orbit">
           <div class="orbit-ring"></div>
           <div class="orbit-core">
-            <span class="orbit-anchor"><i class="fa-solid fa-anchor"></i></span>
+            <!-- Brand logo replaces FA anchor in hero orbit -->
+            <img src="hatLogoWhite.png" alt="HopeAnchor Tech" class="orbit-logo" />
           </div>
         </div>
       </div>
@@ -121,10 +129,10 @@
           </div>
         </div>
         <div class="mission-item">
-          <span class="mi-icon"><i class="fa-solid fa-bolt"></i></span>
+          <span class="mi-icon"><i class="fa-solid fa-globe"></i></span>
           <div>
-            <h4>Action-Oriented</h4>
-            <p>Practical, job-ready skills from day one</p>
+            <h4>Global Reach</h4>
+            <p>Serving clients and students online — anywhere in the world</p>
           </div>
         </div>
         <div class="mission-item">
@@ -147,48 +155,100 @@
         <p class="section-sub">From beginner training to professional services — we do it all, sustainably.</p>
       </div>
       <div class="pillars-grid">
+        <!-- Pillar 1 — links to services.html#training -->
         <div class="pillar-card">
           <div class="pillar-icon-wrap">
             <span class="pillar-icon"><i class="fa-solid fa-chalkboard-user"></i></span>
           </div>
           <h3>Community Training</h3>
-          <p>Hands-on tech education for absolute beginners, students, and job-seekers. Affordable rates for advanced tracks; free foundational courses for the most vulnerable.</p>
+          <p>Hands-on tech education for absolute beginners, students, and job-seekers. Free foundational courses for the most vulnerable — available in-person and online.</p>
           <ul class="pillar-list">
             <li><i class="fa-solid fa-check"></i> Computer Fundamentals</li>
             <li><i class="fa-solid fa-check"></i> Advanced MS Office Suite</li>
             <li><i class="fa-solid fa-check"></i> Cybersecurity Awareness</li>
             <li><i class="fa-solid fa-check"></i> Introduction to Linux</li>
           </ul>
-          <a href="training.html" class="pillar-link">View Courses <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="services.html#training" class="pillar-link">View Courses <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- Pillar 2 — links to services.html#bureau -->
         <div class="pillar-card pillar-featured">
           <div class="pillar-badge">Most Popular</div>
           <div class="pillar-icon-wrap">
             <span class="pillar-icon"><i class="fa-solid fa-building-columns"></i></span>
           </div>
           <h3>Business Bureau</h3>
-          <p>Professional document and admin services for individuals, students, and businesses in Gulu — delivered with precision and care.</p>
+          <p>Professional document and admin services for individuals, students, and businesses — delivered with precision and care, in-person or remotely.</p>
           <ul class="pillar-list">
             <li><i class="fa-solid fa-check"></i> Professional Typing &amp; Formatting</li>
             <li><i class="fa-solid fa-check"></i> CV/Resume Design &amp; Review</li>
             <li><i class="fa-solid fa-check"></i> Printing, Scanning &amp; Copying</li>
             <li><i class="fa-solid fa-check"></i> Freelance Data Entry Support</li>
           </ul>
-          <a href="services.html" class="pillar-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="services.html#bureau" class="pillar-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- Pillar 3 — links to services.html#technical -->
         <div class="pillar-card">
           <div class="pillar-icon-wrap">
             <span class="pillar-icon"><i class="fa-solid fa-microchip"></i></span>
           </div>
           <h3>Technical Services</h3>
-          <p>Enterprise-grade IT solutions scaled for SMEs and local organisations in Northern Uganda — expert quality at accessible prices.</p>
+          <p>Enterprise-grade IT solutions for SMEs and organisations worldwide — expert quality at accessible prices, delivered remotely or on-site.</p>
           <ul class="pillar-list">
             <li><i class="fa-solid fa-check"></i> SME Web Development</li>
             <li><i class="fa-solid fa-check"></i> Computer Repair &amp; Maintenance</li>
             <li><i class="fa-solid fa-check"></i> IT &amp; Security Auditing</li>
             <li><i class="fa-solid fa-check"></i> Data Labeling Consulting</li>
           </ul>
-          <a href="services.html" class="pillar-link">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="services.html#technical" class="pillar-link">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GLOBAL REACH SECTION ============ -->
+  <section class="section global-reach-section">
+    <div class="container">
+      <div class="global-reach-grid">
+        <div class="gr-text">
+          <span class="section-tag">Not Just Local — Global</span>
+          <h2 class="section-title">We Serve Anyone,<br><em>Anywhere in the World</em></h2>
+          <p>While our heart is in Gulu, our reach is global. HopeAnchor Tech operates fully online, meaning you do not need to be in Northern Uganda — or even in Uganda — to benefit from our training, bureau services, or technical solutions.</p>
+          <p>Whether you are a student in Nairobi, a business owner in London, or a diaspora Ugandan in Canada, we can train you, build your website, review your CV, or support your AI data labeling project — all remotely.</p>
+          <div class="gr-points">
+            <div class="gr-point">
+              <i class="fa-solid fa-video"></i>
+              <span>Online training via video call (Zoom / Google Meet)</span>
+            </div>
+            <div class="gr-point">
+              <i class="fa-solid fa-file-arrow-up"></i>
+              <span>Remote document and bureau services via email</span>
+            </div>
+            <div class="gr-point">
+              <i class="fa-solid fa-code"></i>
+              <span>Web development and IT projects delivered remotely</span>
+            </div>
+            <div class="gr-point">
+              <i class="fa-solid fa-globe"></i>
+              <span>Data labeling and AI consulting for global clients</span>
+            </div>
+            <div class="gr-point">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+              <span>Partnership and sponsorship opportunities open worldwide</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:24px;"><i class="fa-solid fa-paper-plane"></i> Reach Out From Anywhere</a>
+        </div>
+        <div class="gr-visual">
+          <div class="gr-globe-card">
+            <div class="gr-globe-icon"><i class="fa-solid fa-earth-africa"></i></div>
+            <div class="gr-badges">
+              <span class="gr-badge"><i class="fa-solid fa-location-dot"></i> Gulu, Uganda 🇺🇬</span>
+              <span class="gr-badge gr-badge-teal"><i class="fa-solid fa-wifi"></i> Online — Worldwide</span>
+              <span class="gr-badge"><i class="fa-brands fa-whatsapp"></i> WhatsApp Consultations</span>
+              <span class="gr-badge"><i class="fa-solid fa-envelope"></i> Email Delivery</span>
+              <span class="gr-badge gr-badge-gold"><i class="fa-solid fa-handshake"></i> Open to Global Partners</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -201,7 +261,7 @@
         <span class="section-tag">Why HopeAnchor Tech</span>
         <h2 class="section-title">More than a tech company.<br><em>A movement.</em></h2>
         <p>We are not just building websites and teaching spreadsheets. We are rebuilding futures. Every shilling earned through our corporate and professional services directly subsidises free training for those who cannot afford it.</p>
-        <p>With over 5 years of institutional data-labeling experience working with global AI firms, our founder brings world-class technical expertise right into the heart of Gulu's community.</p>
+        <p>With over 5 years of institutional data-labeling experience working with global AI firms, our founder brings world-class technical expertise to every client — locally and globally.</p>
         <div class="why-ctas">
           <a href="about.html" class="btn btn-primary"><i class="fa-solid fa-heart"></i> Our Story</a>
           <a href="contact.html" class="btn btn-ghost">Partner With Us <i class="fa-solid fa-handshake"></i></a>
@@ -214,15 +274,16 @@
             <span class="impact-desc">Profits reinvested into free community training</span>
           </div>
           <div class="impact-item">
-            <span class="impact-num">Gulu</span>
-            <span class="impact-desc">Headquartered &amp; rooted in Northern Uganda</span>
+            <span class="impact-num">Global</span>
+            <span class="impact-desc">Online services available to anyone, anywhere</span>
           </div>
           <div class="impact-item">
             <span class="impact-num">Anyone</span>
             <span class="impact-desc">No prior experience required to start</span>
           </div>
           <div class="impact-verse">
-            <span><i class="fa-solid fa-anchor"></i></span>
+            <!-- Brand logo replaces FA anchor -->
+            <img src="hatLogoWhite.png" alt="HopeAnchor Tech" class="impact-logo" />
             <em>"Faith without works is dead." — James 2:17</em>
           </div>
         </div>
@@ -294,7 +355,7 @@
         </div>
         <div class="testi-card testi-featured">
           <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
-          <p>HopeAnchor Tech built our organisation's website and set up our IT infrastructure. Professional, reliable, and very affordable. We couldn't have asked for better.</p>
+          <p>HopeAnchor Tech built our organisation's website remotely and delivered on time. Professional, reliable, and very affordable. We couldn't have asked for better.</p>
           <div class="testi-author">
             <div class="testi-avatar">OK</div>
             <div>
@@ -323,7 +384,7 @@
     <div class="cta-bg-shape"></div>
     <div class="container cta-content">
       <h2>Ready to anchor your future in tech?</h2>
-      <p>Join our next cohort — whether you're starting from scratch or levelling up your career, there's a place for you at HopeAnchor Tech.</p>
+      <p>Join our next cohort — in person in Gulu or online from anywhere in the world. There's a place for you at HopeAnchor Tech.</p>
       <div class="cta-actions">
         <a href="contact.html" class="btn btn-white"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
         <a href="training.html" class="btn btn-outline-white"><i class="fa-solid fa-book-open"></i> Browse Courses</a>
@@ -336,10 +397,11 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo footer-logo">
-          <span class="logo-anchor"><i class="fa-solid fa-anchor"></i></span>
+          <!-- hatLogoBlack for dark footer background -->
+          <img src="hatLogoBlack.png" alt="HopeAnchor Tech Logo" class="logo-img logo-img-footer" />
           <span class="logo-text">HopeAnchor<span class="logo-accent">Tech</span></span>
         </a>
-        <p>A faith-driven social enterprise empowering Northern Uganda through technology — one skill, one life, one community at a time.</p>
+        <p>A faith-driven social enterprise empowering communities through technology — locally rooted in Gulu, Uganda, and globally available to anyone.</p>
         <p class="footer-verse"><em>"Faith without works is dead." — James 2:17</em></p>
         <div class="footer-socials">
           <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -351,10 +413,10 @@
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
-          <li><a href="training.html"><i class="fa-solid fa-chevron-right"></i> Community Training</a></li>
-          <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Business Bureau</a></li>
-          <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Technical Services</a></li>
-          <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Data Labeling</a></li>
+          <li><a href="services.html#training"><i class="fa-solid fa-chevron-right"></i> Community Training</a></li>
+          <li><a href="services.html#bureau"><i class="fa-solid fa-chevron-right"></i> Business Bureau</a></li>
+          <li><a href="services.html#technical"><i class="fa-solid fa-chevron-right"></i> Technical Services</a></li>
+          <li><a href="services.html#technical"><i class="fa-solid fa-chevron-right"></i> Data Labeling</a></li>
         </ul>
       </div>
       <div class="footer-col">

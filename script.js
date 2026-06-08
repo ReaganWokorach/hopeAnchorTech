@@ -289,3 +289,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+/* ============================================================
+   9. DARK / LIGHT THEME TOGGLE
+   ============================================================ */
+(function () {
+  const html      = document.documentElement;
+  const toggleBtn = document.getElementById('themeToggle');
+  const icon      = document.getElementById('themeIcon');
+
+  // Read saved preference; default to 'light'
+  const saved = localStorage.getItem('hat-theme') || 'light';
+  applyTheme(saved);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      const current = html.getAttribute('data-theme') || 'light';
+      applyTheme(current === 'light' ? 'dark' : 'light');
+    });
+  }
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    localStorage.setItem('hat-theme', theme);
+    if (icon) {
+      icon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    }
+  }
+})();
