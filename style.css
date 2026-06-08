@@ -1108,14 +1108,30 @@ em { font-style: italic; color: var(--teal); }
   color: var(--white); 
 }
 .mvv-featured p { 
-  color: var(--grey-100); 
+  color: var(--off-white); 
 }
 
-.mvv-icon { font-size: 36px; display: block; margin-bottom: 16px; }
-.mvv-card h3 { font-size: 22px; margin-bottom: 14px; }
-.mvv-card p { font-size: 15px; color: var(--text-light); line-height: 1.7; }
+.mvv-icon { 
+  font-size: 36px; 
+  display: block; 
+  margin-bottom: 16px; 
+}
 
-.values-list { padding: 0; }
+.mvv-card h3 { 
+  font-size: 22px; 
+  margin-bottom: 14px; 
+}
+
+.mvv-card p { 
+  font-size: 15px; 
+  color: var(--text-light); 
+  line-height: 1.7; 
+}
+
+.values-list { 
+  padding: 0; 
+}
+
 .values-list li {
   font-size: 14px;
   color: var(--text-light);
@@ -2034,7 +2050,7 @@ em { font-style: italic; color: var(--teal); }
 .ta-item > .fa-solid,
 .ta-item > i {
   font-size: 26px;
-  color: var(--gold);
+  color: var(--teal);
   margin-bottom: 12px;
 }
 
