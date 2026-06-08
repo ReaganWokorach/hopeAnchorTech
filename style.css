@@ -1148,6 +1148,7 @@ em { font-style: italic; color: var(--teal); }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .founder-initials {
