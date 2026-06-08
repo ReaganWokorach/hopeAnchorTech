@@ -1060,7 +1060,12 @@ em { font-style: italic; color: var(--teal); }
   box-shadow: var(--shadow-xl);
 }
 
-.callout-anchor { font-size: 48px; display: block; margin-bottom: 20px; }
+.callout-anchor { 
+  font-size: 48px; 
+  display: block; 
+  margin-bottom: 20px; 
+  color: var(--grey-200);
+}
 
 .callout-card blockquote {
   font-family: var(--font-display);
