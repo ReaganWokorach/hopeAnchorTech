@@ -1130,7 +1130,6 @@ em { font-style: italic; color: var(--teal); }
   position: relative;
   width: 220px;
   flex-shrink: 0;
-  overflow: hidden;
 }
 
 .founder-avatar-ring {
@@ -1139,7 +1138,6 @@ em { font-style: italic; color: var(--teal); }
   border: 3px solid var(--teal);
   border-radius: 50%;
   padding: 8px;
-  overflow: hidden;
 }
 
 .founder-avatar-inner {
@@ -1150,6 +1148,15 @@ em { font-style: italic; color: var(--teal); }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 .founder-initials {
