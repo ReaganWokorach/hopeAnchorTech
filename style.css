@@ -1104,8 +1104,12 @@ em { font-style: italic; color: var(--teal); }
   background: linear-gradient(160deg, var(--navy), var(--navy-soft));
   border-color: transparent;
 }
-.mvv-featured h3 { color: var(--white); }
-.mvv-featured p { color: rgba(255,255,255,.75); }
+.mvv-featured h3 { 
+  color: var(--white); 
+}
+.mvv-featured p { 
+  color: var(--grey-100); 
+}
 
 .mvv-icon { font-size: 36px; display: block; margin-bottom: 16px; }
 .mvv-card h3 { font-size: 22px; margin-bottom: 14px; }
@@ -2030,7 +2034,7 @@ em { font-style: italic; color: var(--teal); }
 .ta-item > .fa-solid,
 .ta-item > i {
   font-size: 26px;
-  color: var(--teal);
+  color: var(--gold);
   margin-bottom: 12px;
 }
 
