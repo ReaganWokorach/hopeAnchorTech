@@ -1130,6 +1130,7 @@ em { font-style: italic; color: var(--teal); }
   position: relative;
   width: 220px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .founder-avatar-ring {
