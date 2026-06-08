@@ -1064,7 +1064,7 @@ em { font-style: italic; color: var(--teal); }
   font-size: 48px; 
   display: block; 
   margin-bottom: 20px; 
-  color: var(--grey-200);
+  color: var(--white);
 }
 
 .callout-card blockquote {
