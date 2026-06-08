@@ -1139,7 +1139,6 @@ em { font-style: italic; color: var(--teal); }
   border: 3px solid var(--teal);
   border-radius: 50%;
   padding: 8px;
-  overflow: hidden;
 }
 
 .founder-avatar-inner {
