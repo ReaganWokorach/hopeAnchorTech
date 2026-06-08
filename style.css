@@ -1108,7 +1108,11 @@ em { font-style: italic; color: var(--teal); }
   color: var(--white); 
 }
 .mvv-featured p { 
-  color: var(--off-white); 
+  color: #F0FBF9;
+}
+
+.mvv-featured .mvv-icon i {
+  color: var(--gold, #ffd700);
 }
 
 .mvv-icon { 
