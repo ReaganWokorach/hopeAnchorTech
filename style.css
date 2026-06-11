@@ -217,7 +217,7 @@ em { font-style: italic; color: var(--teal); }
   padding: 0 24px;
   display: flex;
   align-items: center;
-  gap: 32px;
+  justify-content: space-between;
 }
 
 .nav-logo {
@@ -225,7 +225,6 @@ em { font-style: italic; color: var(--teal); }
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  justify-content: space-between;
 }
 
 .logo-anchor {
@@ -247,8 +246,6 @@ em { font-style: italic; color: var(--teal); }
   display: flex;
   align-items: center;
   gap: 4px;
-  flex: 1;
-  justify-content: flex-start;
 }
 
 .nav-link {
