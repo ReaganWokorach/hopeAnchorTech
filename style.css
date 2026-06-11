@@ -1654,10 +1654,94 @@ em { font-style: italic; color: var(--teal); }
 .form-check {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
 }
-.form-check input { width: auto; margin: 0; }
-.form-check label { font-size: 13px; font-weight: 400; color: var(--text-light); margin: 0; cursor: pointer; }
+
+/* Hide the native checkbox completely */
+.form-check input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+/* Custom checkbox box — sits right after the hidden input */
+.form-check input[type="checkbox"] + label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-light);
+  margin: 0;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+/* The visual box — created via ::before on the label */
+.form-check input[type="checkbox"] + label::before {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey-300, #cbd5e1);
+  border-radius: 5px;
+  background: var(--white);
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+/* Checked state — filled teal box */
+.form-check input[type="checkbox"]:checked + label::before {
+  background: var(--teal);
+  border-color: var(--teal);
+  /* Checkmark drawn with CSS clip-path */
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 8l3.5 3.5 6.5-7' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px;
+  background-color: var(--teal);
+}
+
+/* Focus ring for accessibility */
+.form-check input[type="checkbox"]:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(0,169,157,0.25);
+}
+
+/* Hover state */
+.form-check:hover input[type="checkbox"] + label::before {
+  border-color: var(--teal);
+}
+
+/* Dark mode checkbox */
+[data-theme="dark"] .form-check input[type="checkbox"] + label {
+  color: #8b949e;
+}
+[data-theme="dark"] .form-check input[type="checkbox"] + label::before {
+  background: #0d1117;
+  border-color: #30363d;
+}
+[data-theme="dark"] .form-check:hover input[type="checkbox"] + label::before {
+  border-color: #00A99D;
+}
+[data-theme="dark"] .form-check input[type="checkbox"]:checked + label::before {
+  background: var(--teal);
+  border-color: var(--teal);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 8l3.5 3.5 6.5-7' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px;
+  background-color: var(--teal);
+}
 
 .form-success {
   background: #F0FBF9;
