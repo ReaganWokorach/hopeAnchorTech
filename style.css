@@ -2665,7 +2665,7 @@ em { font-style: italic; color: var(--teal); }
   font-weight: 600;
   margin-left: 4px;
 }
-.section-footer-note a:hover { text-decoration: underline; }
+.section-footer-note a:hover { color: var(--teal-light); }
 
 /* ============================================================
    CALLOUT CARD LOGO (replaces FA anchor in story callout)
@@ -2897,3 +2897,18 @@ em { font-style: italic; color: var(--teal); }
 [data-theme="dark"] .founder-tags span  { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: #c9d1d9; }
 [data-theme="dark"] .founder-tags span i { color: #00CFC3; }
 [data-theme="dark"] .founder-badge-float { background: var(--gold); color: var(--navy); }
+
+/* ── Remove all underlines in Services, Contact, and form areas ── */
+.services-detail-grid a,
+.services-section-header a,
+.svc-detail-card a,
+.section-footer-note a,
+.contact-section a,
+.contact-info a,
+.contact-form-wrap a,
+.contact-details a,
+.contact-socials a,
+.quick-links-section a,
+.footer a {
+  text-decoration: none;
+}
