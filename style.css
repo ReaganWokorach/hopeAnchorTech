@@ -2223,9 +2223,9 @@ em { font-style: italic; color: var(--teal); }
 }
 
 /* White logo: shown on dark navbar & dark-theme */
-.logo-img-white { display: block; }
-/* Dark logo: hidden on dark navbar, shown in light-theme mobile or footer */
-.logo-img-dark  { display: none; }
+.logo-img-white { display: block; filter: brightness(0) invert(1); }
+/* Dark logo: shown by default on light navbar */
+.logo-img-dark  { display: none; filter: none; }
 
 /* Footer always uses the black logo for legibility on dark bg */
 .logo-img-footer {
@@ -2329,13 +2329,22 @@ em { font-style: italic; color: var(--teal); }
 [data-theme="dark"] .nav-link:hover,
 [data-theme="dark"] .nav-link.active    { color: #ffffff; background: rgba(255,255,255,0.07); }
 
-/* Dark navbar: always show white logo, hide dark logo */
-[data-theme="dark"] .logo-img-white { display: block; }
-[data-theme="dark"] .logo-img-dark  { display: none;  }
+/* Light theme: hide inverted logo, show normal dark logo */
+[data-theme="light"] .logo-img-white { display: none; }
+[data-theme="light"] .logo-img-dark  { display: block; filter: none; }
 
-/* Light theme: always show dark logo (navbar is white) */
-[data-theme="light"] .logo-img-white { display: none;  }
-[data-theme="light"] .logo-img-dark  { display: block; }
+/* Dark theme: hide dark logo, show inverted white logo */
+[data-theme="dark"] .logo-img-white { display: block; filter: brightness(0) invert(1); }
+[data-theme="dark"] .logo-img-dark  { display: none; }
+
+/* All other logo instances (orbit, impact, footer, callout, ty, error) — invert to white on dark */
+[data-theme="dark"] .orbit-logo,
+[data-theme="dark"] .impact-logo,
+[data-theme="dark"] .logo-img-footer,
+[data-theme="dark"] .callout-logo,
+[data-theme="dark"] .contact-verse-logo,
+[data-theme="dark"] .ty-brand-logo,
+[data-theme="dark"] .error-brand-logo { filter: brightness(0) invert(1); }
 
 /* DARK MODE — white/bright toggle button so it pops on dark navbar */
 [data-theme="dark"] .theme-toggle {
@@ -2696,3 +2705,195 @@ em { font-style: italic; color: var(--teal); }
   color: var(--teal);
   flex-shrink: 0;
 }
+
+/* ============================================================
+   DARK MODE — COMPREHENSIVE COLOUR FIXES
+   ============================================================ */
+
+/* ── Hero stats (5+, 3, Global) ── */
+[data-theme="dark"] .stat-num        { color: #e6edf3; }
+[data-theme="dark"] .stat-label      { color: #8b949e; }
+[data-theme="dark"] .stat-divider    { background: rgba(255,255,255,0.15); }
+[data-theme="dark"] .hero-badge      { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); }
+[data-theme="dark"] .badge-dot       { background: #00CFC3; }
+
+/* ── Hero buttons (outline) ── */
+[data-theme="dark"] .btn-outline {
+  border-color: rgba(255,255,255,0.35);
+  color: #e6edf3;
+}
+[data-theme="dark"] .btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.6);
+  color: #fff;
+}
+
+/* ── Float cards in hero visual ── */
+[data-theme="dark"] .float-card {
+  background: var(--surface);
+  border-color: var(--border-color);
+  color: #e6edf3;
+}
+[data-theme="dark"] .fc-icon i  { color: #00CFC3; }
+[data-theme="dark"] .fc-text    { color: #e6edf3; }
+
+/* ── Hero verse & title lines ── */
+[data-theme="dark"] .hero-verse      { color: #F5A623; }
+[data-theme="dark"] .title-line      { color: #e6edf3; }
+[data-theme="dark"] .accent-line     { color: #00CFC3; }
+
+/* ── Hero stats divider ── */
+[data-theme="dark"] .hero-stats      { border-color: rgba(255,255,255,0.1); }
+
+/* ── Services overview "Our Services" button ── */
+[data-theme="dark"] .btn-ghost {
+  border-color: rgba(255,255,255,0.3);
+  color: #e6edf3;
+}
+[data-theme="dark"] .btn-ghost:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+/* ── TRAINING PAGE — approach cards (Practical-First etc) ── */
+[data-theme="dark"] .ta-item {
+  background: var(--surface);
+  border-color: var(--border-color);
+}
+[data-theme="dark"] .ta-item h4      { color: #e6edf3; }
+[data-theme="dark"] .ta-item p       { color: #8b949e; }
+[data-theme="dark"] .ta-item > i     { color: #00CFC3; }
+
+/* ── TRAINING PAGE — course full cards (All Programmes) ── */
+[data-theme="dark"] .course-full-card {
+  background: var(--surface);
+  border-color: var(--border-color);
+}
+[data-theme="dark"] .cfc-header      { background: rgba(255,255,255,0.03); border-color: var(--border-color); }
+[data-theme="dark"] .cfc-meta h3     { color: #e6edf3; }
+[data-theme="dark"] .cfc-body        { background: var(--surface); }
+[data-theme="dark"] .cfc-body p      { color: #8b949e; }
+[data-theme="dark"] .cfc-curriculum  { background: rgba(255,255,255,0.03); border-color: var(--border-color); }
+[data-theme="dark"] .cfc-curriculum h5 { color: #e6edf3; }
+[data-theme="dark"] .curr-item       { color: #8b949e; }
+[data-theme="dark"] .cfc-footer      { border-color: var(--border-color); }
+[data-theme="dark"] .who-for         { color: #8b949e; }
+[data-theme="dark"] .course-tag.free  { background: rgba(0,169,157,0.2); color: #00CFC3; border-color: rgba(0,169,157,0.3); }
+[data-theme="dark"] .course-tag.paid  { background: rgba(245,166,35,0.15); color: #F5A623; border-color: rgba(245,166,35,0.25); }
+[data-theme="dark"] .cfc-details span { color: #8b949e; }
+
+/* ── Training approach grid ── */
+[data-theme="dark"] .training-approach-grid { background: var(--body-bg); }
+
+/* ── CONTACT & ENROL FORM — dark styled inputs ── */
+[data-theme="dark"] .contact-form-wrap {
+  background: var(--surface);
+  border-color: var(--border-color);
+}
+[data-theme="dark"] .contact-form-wrap h3  { color: #e6edf3; }
+[data-theme="dark"] .form-sub              { color: #8b949e; }
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background: #0d1117;
+  color: #e6edf3;
+  border-color: #30363d;
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder { color: #556070; }
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: #00A99D;
+  background: #0a0f16;
+  outline: none;
+}
+[data-theme="dark"] select option        { background: #161b22; color: #e6edf3; }
+
+[data-theme="dark"] .form-group label    { color: #c9d1d9; }
+[data-theme="dark"] .form-group label i  { color: #00CFC3; }
+[data-theme="dark"] .form-check label    { color: #8b949e; }
+[data-theme="dark"] .req                 { color: #ff6b6b; }
+[data-theme="dark"] .form-privacy-note   { color: #556070; }
+
+/* Contact info side */
+[data-theme="dark"] .contact-section     { background: var(--body-bg); }
+[data-theme="dark"] .contact-info h2     { color: #e6edf3; }
+[data-theme="dark"] .contact-info > p    { color: #8b949e; }
+[data-theme="dark"] .contact-social-btn {
+  background: var(--surface);
+  border-color: var(--border-color);
+  color: #c9d1d9;
+}
+[data-theme="dark"] .contact-social-btn:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+[data-theme="dark"] .contact-verse-box {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.1);
+}
+[data-theme="dark"] .contact-verse-box blockquote { color: #F5A623; }
+[data-theme="dark"] .contact-verse-box p           { color: #8b949e; }
+
+/* ── Quick links cards ── */
+[data-theme="dark"] .ql-card {
+  background: var(--surface);
+  border-color: var(--border-color);
+  color: #c9d1d9;
+}
+[data-theme="dark"] .ql-card h4         { color: #e6edf3; }
+[data-theme="dark"] .ql-card p          { color: #8b949e; }
+[data-theme="dark"] .ql-card i          { color: #00CFC3; }
+[data-theme="dark"] .ql-card:hover      { border-color: var(--teal); }
+
+/* ── Page hero (inner pages) ── */
+[data-theme="dark"] .page-hero          { background: linear-gradient(160deg, #0a0f16 0%, #0d1826 100%); }
+[data-theme="dark"] .page-hero p        { color: rgba(255,255,255,0.65); }
+
+/* ── Section footer note ── */
+[data-theme="dark"] .section-footer-note {
+  background: rgba(0,169,157,0.08);
+  border-color: rgba(0,169,157,0.2);
+  color: #8b949e;
+}
+[data-theme="dark"] .section-footer-note a { color: #00CFC3; }
+
+/* ── Why services items ── */
+[data-theme="dark"] .why-svc-item h4    { color: #e6edf3; }
+[data-theme="dark"] .why-svc-item p     { color: #8b949e; }
+[data-theme="dark"] .why-svc-item i     { color: #00CFC3; }
+
+/* ── SVC card meta ── */
+[data-theme="dark"] .svc-card-meta      { border-color: var(--border-color); color: #8b949e; }
+
+/* ── Callout card ── */
+[data-theme="dark"] .callout-card blockquote { color: #e6edf3; }
+[data-theme="dark"] .callout-card cite        { color: #8b949e; }
+
+/* ── Impact box ── */
+[data-theme="dark"] .impact-box         { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1); }
+[data-theme="dark"] .impact-verse em    { color: #8b949e; }
+
+/* ── Mission strip icons ── */
+[data-theme="dark"] .mi-icon i          { color: #00CFC3; }
+
+/* ── Model flow (about page) ── */
+[data-theme="dark"] .model-step         { background: var(--surface); border-color: var(--border-color); }
+[data-theme="dark"] .model-step h4      { color: #e6edf3; }
+[data-theme="dark"] .model-step p       { color: #8b949e; }
+[data-theme="dark"] .ms-num             { color: var(--teal); }
+[data-theme="dark"] .ms-highlight       { background: rgba(0,169,157,0.12); border-color: rgba(0,169,157,0.3); }
+[data-theme="dark"] .model-arrow i      { color: #00CFC3; }
+
+/* ── Story section text ── */
+[data-theme="dark"] .story-text p       { color: #8b949e; }
+[data-theme="dark"] .story-text h2      { color: #e6edf3; }
+
+/* ── Founder section ── */
+[data-theme="dark"] .founder-text p     { color: #8b949e; }
+[data-theme="dark"] .founder-tags span  { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: #c9d1d9; }
+[data-theme="dark"] .founder-tags span i { color: #00CFC3; }
+[data-theme="dark"] .founder-badge-float { background: var(--gold); color: var(--navy); }
