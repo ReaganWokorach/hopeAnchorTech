@@ -225,6 +225,7 @@ em { font-style: italic; color: var(--teal); }
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  justify-content: space-between;
 }
 
 .logo-anchor {
