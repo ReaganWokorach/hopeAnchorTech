@@ -2266,10 +2266,12 @@ em { font-style: italic; color: var(--teal); }
 /* ============================================================
    DARK / LIGHT THEME TOGGLE
    ============================================================ */
+
+/* LIGHT MODE — dark button so it's visible on the white navbar */
 .theme-toggle {
-  background: rgba(255,255,255,0.1);
-  border: 1.5px solid rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.85);
+  background: var(--navy);
+  border: 1.5px solid var(--navy);
+  color: #ffffff;
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -2288,7 +2290,7 @@ em { font-style: italic; color: var(--teal); }
 }
 
 /* ============================================================
-   LIGHT THEME (default — html[data-theme="light"])
+   LIGHT THEME (default)
    ============================================================ */
 :root,
 [data-theme="light"] {
@@ -2300,7 +2302,7 @@ em { font-style: italic; color: var(--teal); }
 }
 
 /* ============================================================
-   DARK THEME (html[data-theme="dark"])
+   DARK THEME
    ============================================================ */
 [data-theme="dark"] {
   --body-bg: #0d1117;
@@ -2315,7 +2317,39 @@ em { font-style: italic; color: var(--teal); }
   color: var(--text-main);
 }
 
-/* Dark theme: sections */
+/* ── 3. Dark navbar ── */
+[data-theme="dark"] .navbar {
+  background: rgba(13, 17, 23, 0.97);
+  border-bottom-color: #30363d;
+}
+
+/* Dark navbar: logo text & links go white */
+[data-theme="dark"] .logo-text          { color: #e6edf3; }
+[data-theme="dark"] .nav-link           { color: #8b949e; }
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active    { color: #ffffff; background: rgba(255,255,255,0.07); }
+
+/* Dark navbar: always show white logo, hide dark logo */
+[data-theme="dark"] .logo-img-white { display: block; }
+[data-theme="dark"] .logo-img-dark  { display: none;  }
+
+/* Light theme: always show dark logo (navbar is white) */
+[data-theme="light"] .logo-img-white { display: none;  }
+[data-theme="light"] .logo-img-dark  { display: block; }
+
+/* DARK MODE — white/bright toggle button so it pops on dark navbar */
+[data-theme="dark"] .theme-toggle {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.3);
+  color: #ffffff;
+}
+[data-theme="dark"] .theme-toggle:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+
+/* ── Dark theme: sections ── */
 [data-theme="dark"] .section,
 [data-theme="dark"] .why-us,
 [data-theme="dark"] .training-tease,
@@ -2332,7 +2366,7 @@ em { font-style: italic; color: var(--teal); }
   background-color: var(--surface);
 }
 
-/* Dark theme: cards & boxes */
+/* ── Dark theme: cards & boxes ── */
 [data-theme="dark"] .pillar-card,
 [data-theme="dark"] .course-card,
 [data-theme="dark"] .testi-card,
@@ -2349,6 +2383,20 @@ em { font-style: italic; color: var(--teal); }
   color: var(--text-main);
 }
 
+/* ── Dark theme: headings inside cards ── */
+[data-theme="dark"] .pillar-card h3,
+[data-theme="dark"] .pillar-card h4,
+[data-theme="dark"] .course-card h4,
+[data-theme="dark"] .mvv-card h3,
+[data-theme="dark"] .svc-detail-card h4,
+[data-theme="dark"] .why-svc-item h4,
+[data-theme="dark"] .testi-card strong,
+[data-theme="dark"] .faq-item h4,
+[data-theme="dark"] .course-full-card h3 {
+  color: #e6edf3;
+}
+
+/* ── Dark theme: body text inside cards ── */
 [data-theme="dark"] .pillar-card p,
 [data-theme="dark"] .course-card p,
 [data-theme="dark"] .testi-card p,
@@ -2359,33 +2407,100 @@ em { font-style: italic; color: var(--teal); }
 [data-theme="dark"] .section-sub,
 [data-theme="dark"] .hero-sub,
 [data-theme="dark"] .why-text p,
-[data-theme="dark"] .gr-text p {
+[data-theme="dark"] .gr-text p,
+[data-theme="dark"] .cfc-body p,
+[data-theme="dark"] .who-for {
   color: var(--text-light);
 }
 
+/* ── Dark theme: section titles & page titles ── */
 [data-theme="dark"] .section-title,
 [data-theme="dark"] .hero-title,
 [data-theme="dark"] .page-hero-title {
   color: var(--text-main);
 }
 
-/* Dark theme: navbar swaps logo */
-[data-theme="dark"] .logo-img-white { display: block; }
-[data-theme="dark"] .logo-img-dark  { display: none; }
-
-/* Light theme navbar: if navbar scrolled & light theme, show dark logo */
-[data-theme="light"] .navbar.scrolled .logo-img-white { display: none; }
-[data-theme="light"] .navbar.scrolled .logo-img-dark  { display: block; }
-/* But keep white when navbar is at top (transparent/dark bg) */
-[data-theme="light"] .navbar:not(.scrolled) .logo-img-white { display: block; }
-[data-theme="light"] .navbar:not(.scrolled) .logo-img-dark  { display: none; }
-
-/* Dark theme toggle icon flip */
-[data-theme="dark"] .theme-toggle {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.15);
-  color: #ffd700;
+/* ── 2. Dark theme: pillar icons, list icons, card icons → white/teal ── */
+[data-theme="dark"] .pillar-icon i,
+[data-theme="dark"] .mi-icon i,
+[data-theme="dark"] .mvv-icon i,
+[data-theme="dark"] .ms-icon i,
+[data-theme="dark"] .svc-detail-icon i,
+[data-theme="dark"] .why-svc-item > i,
+[data-theme="dark"] .course-icon i,
+[data-theme="dark"] .cfc-icon i,
+[data-theme="dark"] .ta-item > i {
+  color: #00CFC3;
 }
+
+[data-theme="dark"] .pillar-list li i,
+[data-theme="dark"] .values-list li i,
+[data-theme="dark"] .svc-detail-card ul li i,
+[data-theme="dark"] .curr-item i,
+[data-theme="dark"] .cfc-details span i,
+[data-theme="dark"] .footer-col ul li a i,
+[data-theme="dark"] .footer-contact li i,
+[data-theme="dark"] .svc-card-meta i,
+[data-theme="dark"] .section-footer-note i,
+[data-theme="dark"] .gr-point i {
+  color: #00CFC3;
+}
+
+/* ── Dark theme: mission strip text ── */
+[data-theme="dark"] .mission-item h4,
+[data-theme="dark"] .mission-item p    { color: var(--text-main); }
+[data-theme="dark"] .mission-strip     { background: var(--surface); }
+
+/* ── Dark theme: section tags ── */
+[data-theme="dark"] .section-tag { color: var(--teal); }
+
+/* ── Dark theme: impact box numbers ── */
+[data-theme="dark"] .impact-num { color: var(--teal); }
+
+/* ── Dark theme: pillar link arrows ── */
+[data-theme="dark"] .pillar-link       { color: var(--teal); }
+[data-theme="dark"] .pillar-link:hover { color: #00CFC3; }
+
+/* ── Dark theme: course tags ── */
+[data-theme="dark"] .course-level      { color: var(--text-light); }
+[data-theme="dark"] .course-level i    { color: #00CFC3; }
+
+/* ── Dark theme: testimonial authors ── */
+[data-theme="dark"] .testi-author span { color: var(--text-light); }
+[data-theme="dark"] .testi-quote i     { color: #00CFC3; }
+
+/* ── Dark theme: why-us section text ── */
+[data-theme="dark"] .why-text h2       { color: var(--text-main); }
+[data-theme="dark"] .impact-verse em   { color: var(--text-light); }
+
+/* ── Dark theme: FAQ ── */
+[data-theme="dark"] .faq-item h4       { color: var(--text-main); }
+[data-theme="dark"] .faq-item h4 i     { color: #00CFC3; }
+
+/* ── Dark theme: forms & inputs ── */
+[data-theme="dark"] .contact-form-wrap,
+[data-theme="dark"] .contact-info      { color: var(--text-main); }
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background: var(--surface);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+[data-theme="dark"] label              { color: var(--text-main); }
+[data-theme="dark"] .form-group label i { color: #00CFC3; }
+[data-theme="dark"] .cd-item strong    { color: var(--text-main); }
+[data-theme="dark"] .cd-item p         { color: var(--text-light); }
+[data-theme="dark"] .cd-icon i         { color: #00CFC3; }
+
+/* ── Dark theme: footer ── */
+[data-theme="dark"] .footer            { background: #0a0f16; }
+[data-theme="dark"] .footer-bottom     { border-color: #1e2530; }
+[data-theme="dark"] .footer p,
+[data-theme="dark"] .footer-col ul li a,
+[data-theme="dark"] .footer-contact li { color: rgba(255,255,255,0.55); }
+[data-theme="dark"] .footer-col h5     { color: #e6edf3; }
+[data-theme="dark"] .footer-socials a  { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.5); }
 
 /* ============================================================
    GLOBAL REACH SECTION
