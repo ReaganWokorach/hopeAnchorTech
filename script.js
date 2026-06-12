@@ -380,6 +380,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     if (matched) {
+      // Show the pre-selection notice banner
+      const notice = document.getElementById('preselectNotice');
+      if (notice) notice.classList.add('show');
+
       // Briefly highlight the field so the user notices it was pre-filled
       const group = subjectSelect.closest('.form-group');
       if (group) {
