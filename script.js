@@ -317,3 +317,84 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 })();
+
+/* ============================================================
+   10. WHATSAPP FLOATING BUTTON
+   ============================================================ */
+(function () {
+  const waBtn = document.getElementById('whatsappFloat');
+  if (!waBtn) return;
+
+  // Hide on scroll down quickly, show on scroll up (avoid covering content)
+  let lastScroll = 0;
+  window.addEventListener('scroll', function () {
+    const current = window.pageYOffset;
+    if (current > lastScroll && current > 300) {
+      waBtn.classList.add('wa-hidden');
+    } else {
+      waBtn.classList.remove('wa-hidden');
+    }
+    lastScroll = current;
+  });
+})();
+
+/* ============================================================
+   11. BACK TO TOP BUTTON
+   ============================================================ */
+(function () {
+  const topBtn = document.getElementById('backToTop');
+  if (!topBtn) return;
+
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 400) {
+      topBtn.classList.add('show');
+    } else {
+      topBtn.classList.remove('show');
+    }
+  });
+
+  topBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+/* ============================================================
+   12. CONTACT FORM — AUTO-SELECT SERVICE FROM URL PARAM
+   ============================================================ */
+(function () {
+  const subjectSelect = document.getElementById('subject');
+  if (!subjectSelect) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const interest = params.get('interest');
+
+  if (interest) {
+    // Try to match the option value exactly (case-insensitive)
+    let matched = false;
+    for (let i = 0; i < subjectSelect.options.length; i++) {
+      const opt = subjectSelect.options[i];
+      if (opt.value.toLowerCase() === interest.toLowerCase()) {
+        subjectSelect.value = opt.value;
+        matched = true;
+        break;
+      }
+    }
+    if (matched) {
+      // Briefly highlight the field so the user notices it was pre-filled
+      const group = subjectSelect.closest('.form-group');
+      if (group) {
+        group.classList.add('field-highlight');
+        setTimeout(function () {
+          group.classList.remove('field-highlight');
+        }, 2200);
+      }
+      // Scroll the form into view on mobile so user sees the pre-selection
+      const formWrap = document.querySelector('.contact-form-wrap');
+      if (formWrap && window.innerWidth < 900) {
+        setTimeout(function () {
+          formWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 400);
+      }
+    }
+  }
+})();
