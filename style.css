@@ -3305,3 +3305,346 @@ em { font-style: italic; color: var(--teal); }
 
 /* ── 9. Logo name: Hope Anchor Tech (three words) — fixed in HTML ── */
 
+
+/* ============================================================
+   CERTIFICATE PREVIEW SECTION — training.html
+   ============================================================ */
+.cert-preview-section {
+  background: var(--off-white);
+}
+
+.cert-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* Left column — text */
+.cert-preview-text .section-tag { display: block; margin-bottom: 12px; }
+.cert-preview-text .section-title { margin-bottom: 20px; }
+.cert-preview-text p { color: var(--text-light); margin-bottom: 14px; font-size: 15px; line-height: 1.75; }
+
+.cert-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cert-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+.cert-feature-list li i {
+  color: var(--teal);
+  font-size: 15px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* Right column — visual frame */
+.cert-preview-visual {
+  position: relative;
+}
+.cert-preview-frame {
+  position: relative;
+  padding: 24px;
+  background: linear-gradient(145deg, var(--navy) 0%, var(--navy-soft) 100%);
+  border-radius: 20px;
+  box-shadow: 0 32px 80px rgba(13,31,60,0.28), 0 0 0 1px rgba(245,166,35,0.2);
+}
+.cert-preview-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  z-index: 2;
+}
+.cert-preview-glow {
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(ellipse at center, rgba(245,166,35,0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── The certificate card itself ── */
+.cert-card {
+  background: linear-gradient(180deg, #f7f8fb 0%, #eef1f8 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: var(--font-body);
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+/* Gold corner accents */
+.cert-card::before,
+.cert-card::after {
+  content: '';
+  position: absolute;
+  width: 22px; height: 22px;
+  border: 2px solid var(--gold);
+  z-index: 1;
+}
+.cert-card::before { top: 36px; left: 36px; border-right: none; border-bottom: none; }
+.cert-card::after  { top: 36px; right: 36px; border-left: none; border-bottom: none; }
+
+/* Navy top band */
+.cert-card-topband {
+  background: var(--navy);
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, transparent, var(--gold), var(--teal), var(--gold), transparent) 1;
+}
+.cert-card-diamonds {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ccd {
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+.ccd.ccd-lg {
+  width: 10px; height: 10px;
+  opacity: 1;
+}
+
+.cert-card-body {
+  padding: 20px 28px 16px;
+  text-align: center;
+}
+
+/* CERTIFICATE OF COMPLETION header row */
+.cert-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.cert-card-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+.cert-card-accent { color: var(--teal); }
+.cert-card-icon {
+  font-size: 18px;
+  color: var(--navy);
+}
+
+.cert-card-org {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--navy-soft);
+  margin-bottom: 6px;
+}
+.cert-card-certify {
+  font-size: 7px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.cert-card-name {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--gold);
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+.cert-card-completed {
+  font-size: 7px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.cert-card-course-panel {
+  background: var(--navy);
+  padding: 6px 16px;
+  margin: 0 -4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 7.5px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  border-top: 1.5px solid var(--gold);
+  border-bottom: 1.5px solid var(--gold);
+}
+.cert-card-diamond { color: var(--gold); font-size: 8px; }
+.cert-card-meta { font-size: 9px; color: #4a5468; margin-bottom: 2px; }
+.cert-card-meta strong { color: var(--navy); }
+.cert-card-hours {
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+
+/* Signatures */
+.cert-card-sigs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 4px;
+}
+.cert-card-sig { text-align: center; flex: 1; }
+.cert-card-signame {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--navy);
+  display: block;
+  border-bottom: 1px solid #c8cdd8;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+.cert-card-siglabel { font-size: 7px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); }
+.cert-card-sigsub { font-size: 7px; color: var(--grey-400); }
+
+.cert-card-seal {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  background: radial-gradient(circle, rgba(245,166,35,0.06), transparent);
+}
+.cert-card-seal::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px dashed rgba(245,166,35,0.5);
+  border-radius: 50%;
+}
+.cert-card-seal i { font-size: 14px; color: var(--navy); margin-bottom: 1px; }
+.cert-card-seal-text { font-size: 5.5px; font-weight: 800; letter-spacing: 0.5px; text-align: center; text-transform: uppercase; color: var(--navy); line-height: 1.4; }
+
+/* Navy footer band */
+.cert-card-footer {
+  background: var(--navy);
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  border-top: 2px solid;
+  border-image: linear-gradient(90deg, transparent, var(--gold), var(--teal), var(--gold), transparent) 1;
+}
+.cert-card-footer em {
+  font-family: var(--font-display);
+  font-size: 8px;
+  color: var(--gold);
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+.cert-card-footer span {
+  font-size: 7px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.5px;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .cert-preview-section { background: var(--bg); }
+[data-theme="dark"] .cert-preview-text p { color: var(--text-light); }
+[data-theme="dark"] .cert-feature-list li { color: var(--text-light); }
+[data-theme="dark"] .cert-card { background: linear-gradient(180deg, #1a2744 0%, #131d35 100%); }
+[data-theme="dark"] .cert-card-title { color: #e6edf3; }
+[data-theme="dark"] .cert-card-org { color: #8b949e; }
+[data-theme="dark"] .cert-card-meta { color: #8b949e; }
+[data-theme="dark"] .cert-card-signame { color: #e6edf3; }
+[data-theme="dark"] .cert-card-siglabel { color: #e6edf3; }
+[data-theme="dark"] .cert-card-seal i { color: var(--gold); }
+[data-theme="dark"] .cert-card-seal-text { color: var(--gold); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cert-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .cert-preview-visual { order: -1; }
+}
+@media (max-width: 480px) {
+  .cert-card-sigs { gap: 10px; }
+  .cert-card-name { font-size: 16px; }
+}
+
+/* ============================================================
+   CERTIFICATE ACTUAL IMAGE — training.html
+   ============================================================ */
+.cert-img-wrap {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(13,31,60,0.28), 0 4px 16px rgba(13,31,60,0.12);
+}
+.cert-actual-img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-md);
+  transition: transform 0.4s ease;
+}
+.cert-img-wrap:hover .cert-actual-img {
+  transform: scale(1.02);
+}
+.cert-img-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,31,60,0.92) 0%, transparent 100%);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 28px 20px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.3px;
+}
+.cert-img-caption i { color: var(--teal); font-size: 15px; }
