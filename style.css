@@ -1111,8 +1111,8 @@ em { font-style: italic; color: var(--teal); }
   color: #F0FBF9;
 } */
 
-.mvv-card .mvv-featured p {
-  color: var(--gold, #ffd700);
+.mvv-card.mvv-featured p {
+  color: #d4f0ec;
 }
 
 .mvv-featured .mvv-icon i {
@@ -3186,3 +3186,122 @@ em { font-style: italic; color: var(--teal); }
 [data-theme="dark"] .stats-counter-section {
   background: linear-gradient(135deg, #0a1628 0%, #12243d 100%);
 }
+
+/* ============================================================
+   PATCH v2 — All fixes applied
+   ============================================================ */
+
+/* ── 1. Select dropdown: always show chevron arrow ── */
+.form-group select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7488' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px !important;
+  padding-right: 42px !important;
+}
+[data-theme="dark"] .form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2300CFC3' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px !important;
+  padding-right: 42px !important;
+}
+
+/* ── 2. Stats counter — ensure bright white text on light mode too ── */
+.stats-counter-section .stats-counter-num,
+.stats-counter-section .stat-num {
+  color: #ffffff !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+.stats-counter-section .stats-counter-label {
+  color: rgba(255,255,255,0.85) !important;
+}
+.stats-counter-section .stats-counter-icon {
+  color: #00CFC3 !important;
+}
+
+/* ── 3. Back-to-top: raise above footer copyright, no overlap ── */
+.back-to-top {
+  bottom: 90px !important;
+}
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 88px !important;
+    left: 14px !important;
+  }
+}
+
+/* ── 4. WhatsApp float: always visible, stacked above back-to-top ── */
+.whatsapp-float {
+  bottom: 24px !important;
+  right: 24px !important;
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+}
+.whatsapp-float.wa-hidden {
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+}
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 18px !important;
+    right: 14px !important;
+  }
+}
+
+/* ── 5. Our Values — darken value words in dark mode, remove underlines ── */
+.values-list li {
+  text-decoration: none !important;
+  list-style: none !important;
+}
+.values-list li strong {
+  text-decoration: none !important;
+}
+/* Light mode: make value words clearly navy */
+.values-list strong {
+  color: var(--navy) !important;
+  font-weight: 700 !important;
+}
+/* Dark mode: brighten the value title words to near-white */
+[data-theme="dark"] .values-list li {
+  color: #c9d1d9 !important;
+}
+[data-theme="dark"] .values-list strong {
+  color: #e6edf3 !important;
+  font-weight: 700 !important;
+}
+
+/* ── 6. Our Vision text in light mode — improve readability ── */
+.mvv-featured p {
+  color: #d4f0ec !important;
+}
+/* Also ensure Our Vision card paragraph is bright enough */
+.mvv-card.mvv-featured p {
+  color: #d4f0ec !important;
+}
+
+/* ── 7. Cycle icon (fa-rotate) in Revenue Reinvested — visible in light mode ── */
+.model-step.ms-highlight .ms-icon i {
+  color: #ffffff !important;
+}
+.ms-highlight .ms-icon {
+  color: #ffffff !important;
+}
+
+/* ── 8. Remove underlines on impact-item / Why Us section ── */
+.impact-item {
+  text-decoration: none !important;
+}
+.impact-num {
+  text-decoration: none !important;
+}
+.impact-desc {
+  text-decoration: none !important;
+}
+
+/* ── 9. Logo name: Hope Anchor Tech (three words) — fixed in HTML ── */
+

@@ -25,23 +25,31 @@
     Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
 
 # ============================================================
-# NETLIFY FORMS — Email notification
+# NETLIFY FORMS — Email notifications for BOTH forms
 #
-# This configures Netlify to email you every time someone
-# submits the contact form.
+# Netlify automatically detects HTML forms with data-netlify="true"
+# and saves all submissions to your dashboard.
 #
-# HOW TO ACTIVATE (one-time setup after first deploy):
-#   1. Go to: app.netlify.com → Your Site → Site configuration
-#   2. Click: Forms → Form notifications
-#   3. Click: "Add notification" → "Email notification"
-#   4. Enter your email: wokorachreagan5030@gmail.com
-#   5. Select form: "contact"
-#   6. Save — you will now receive an instant email alert
-#      every time someone submits the form.
+# TO ACTIVATE EMAIL NOTIFICATIONS (one-time setup after deploy):
 #
-# ALTERNATIVE (Netlify Zapier/webhook):
-#   Use Zapier to connect Netlify Forms → Gmail for richer
-#   formatted email alerts with all field values visible.
+#   STEP 1 — Contact Form:
+#     app.netlify.com → Your Site → Site configuration → Forms
+#     → Select form "contact" → Notifications → Add notification
+#     → Email notification → wokorachreagan5030@gmail.com → Save
+#
+#   STEP 2 — Enrol Form:
+#     Same path → Select form "enrol" → Notifications
+#     → Add notification → Email notification
+#     → wokorachreagan5030@gmail.com → Save
+#
+#   You will then receive an instant email every time either
+#   form is submitted, showing all field values.
+#   Submissions also appear in: Forms tab on your Netlify dashboard.
+#
+# NOTE: netlify.toml cannot set email addresses directly —
+#   Netlify requires the notification email to be set via the
+#   dashboard UI (above) for security reasons. The form detection
+#   and submission storage is fully automatic from this config.
 # ============================================================
 
 [dev]
