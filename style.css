@@ -657,7 +657,7 @@ em { font-style: italic; color: var(--teal); }
   position: relative;
 }
 .pillar-list li::before {
-  /* content: '→'; */
+  content: '→';
   position: absolute;
   left: 0;
   color: var(--teal);
