@@ -1,0 +1,8 @@
+{
+  "next_cohort": {
+    "course": "Computer Fundamentals",
+    "date": "2026-08-04",
+    "time_utc": "05:00",
+    "note": "Change 'date' to your next cohort start date (YYYY-MM-DD format). Time is UTC — Uganda is UTC+3, so 05:00 UTC = 08:00 Uganda time. Change 'course' to the name of whichever course is opening next."
+  }
+}

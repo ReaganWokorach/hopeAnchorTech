@@ -123,22 +123,47 @@
   </div>
   <script>
   (function(){
-    // Set target date: next 1st of coming month at 08:00 Uganda time (UTC+3)
-    var now = new Date();
-    var target = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth()+1, 1, 5, 0, 0)); // 08:00 UTC+3 = 05:00 UTC
-    function tick(){
-      var diff = target - new Date();
-      if(diff <= 0){ document.getElementById('cohortCountdown').style.display='none'; return; }
-      var d = Math.floor(diff/86400000);
-      var h = Math.floor((diff%86400000)/3600000);
-      var m = Math.floor((diff%3600000)/60000);
-      var s = Math.floor((diff%60000)/1000);
-      document.getElementById('cdDays').textContent  = String(d).padStart(2,'0');
-      document.getElementById('cdHours').textContent = String(h).padStart(2,'0');
-      document.getElementById('cdMins').textContent  = String(m).padStart(2,'0');
-      document.getElementById('cdSecs').textContent  = String(s).padStart(2,'0');
-    }
-    tick(); setInterval(tick,1000);
+    // Reads cohort date from cohort.json — edit that file to update the countdown
+    fetch('/cohort.json?v=' + Date.now())
+      .then(r => r.json())
+      .then(data => {
+        var cohort = data.next_cohort;
+        // Build target date from "date" + "time_utc" fields
+        var target = new Date(cohort.date + 'T' + cohort.time_utc + ':00Z');
+
+        // Update course name in banner
+        var courseLabel = document.querySelector('.cd-course');
+        if (courseLabel) courseLabel.textContent = cohort.course;
+
+        var banner = document.getElementById('cohortCountdown');
+        var interval;
+
+        function tick(){
+          var diff = target - new Date();
+          if (diff <= 0) {
+            // Countdown finished — hide the banner cleanly
+            if (banner) banner.style.display = 'none';
+            clearInterval(interval);
+            return;
+          }
+          var d = Math.floor(diff / 86400000);
+          var h = Math.floor((diff % 86400000) / 3600000);
+          var m = Math.floor((diff % 3600000) / 60000);
+          var s = Math.floor((diff % 60000) / 1000);
+          document.getElementById('cdDays').textContent  = String(d).padStart(2,'0');
+          document.getElementById('cdHours').textContent = String(h).padStart(2,'0');
+          document.getElementById('cdMins').textContent  = String(m).padStart(2,'0');
+          document.getElementById('cdSecs').textContent  = String(s).padStart(2,'0');
+        }
+
+        tick();
+        interval = setInterval(tick, 1000);
+      })
+      .catch(() => {
+        // If cohort.json fails to load, hide the banner gracefully
+        var banner = document.getElementById('cohortCountdown');
+        if (banner) banner.style.display = 'none';
+      });
   })();
   </script>
 
