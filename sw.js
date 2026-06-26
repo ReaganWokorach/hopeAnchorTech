@@ -1,7 +1,4 @@
-// Hope Anchor Tech — Service Worker v2.0
-// Cache version — INCREMENT THIS (change v2 to v3, v4 etc.) every time you deploy
-// That single change forces every visitor's browser to download the new version
-const CACHE = 'hat-cache-v2';
+const CACHE = 'hat-cache-v3';
 
 const PRECACHE = [
   '/', '/index.html', '/about.html', '/services.html',
